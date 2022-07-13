@@ -10,7 +10,7 @@ function Header() {
 
 
         {/* logo  */}
-        <Link to="/login">
+        <Link to="/">
         <img className='header__logo' src={logo} alt='logo'/>
         </Link>
 
