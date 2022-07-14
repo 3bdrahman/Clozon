@@ -1,6 +1,21 @@
 import React from 'react'
 import "./Product.css";
-function product(props) {
+import { useStateValue } from './StateProvider';
+function Product(props) {
+  const [{cart},dispatch]=useStateValue();
+  console.log("this is the cart", cart)
+  const addToCart = ()=>{
+        dispatch({
+          type: 'Add_To_Cart',
+          item:{
+            id: props.id,
+            title: props.title,
+            image: props.image,
+            price:props.price,
+            rating:props.rating,
+          },
+        });
+  };
   return (
     <div className='product'>
     <div className='product__info'>
@@ -30,10 +45,10 @@ function product(props) {
     
     <img src={props.img} 
       />
-      <button>Add to Cart</button>
+      <button onClick={addToCart}>Add to Cart</button>
       </div>
     
   )
 }
 
-export default product
+export default Product
