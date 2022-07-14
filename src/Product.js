@@ -43,7 +43,7 @@ function Product(props) {
       </div>
     </div>
     
-    <img src={props.img} 
+    <img src={props.image} 
       />
       <button onClick={addToCart}>Add to Cart</button>
       </div>
