@@ -95,7 +95,7 @@
 }
 
 .login__loginButton:hover, .login__loginButton:focus {
-    color: #fff;
+    color: #111111;
     outline: 0;
   }
 

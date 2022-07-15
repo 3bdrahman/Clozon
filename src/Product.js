@@ -2,8 +2,8 @@ import React from 'react'
 import "./Product.css";
 import { useStateValue } from './StateProvider';
 function Product(props) {
-  const [{cart},dispatch]=useStateValue();
-  console.log("this is the cart", cart)
+  const [{cart, user},dispatch]=useStateValue();
+  // console.log("this is the cart", cart)
   const addToCart = ()=>{
         dispatch({
           type: 'Add_To_Cart',

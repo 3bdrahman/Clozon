@@ -1,5 +1,6 @@
 export const initialState={
     cart:[],
+    user:null
 }
 // the selectopr
 export const getCartTotal=(cart)=>
@@ -27,6 +28,11 @@ const reducer= (state,action)=>{
                 ...state,
                 cart: newCart
             }
+            case 'Set_User':
+                return{
+                    ...state,
+                    user: action.user
+                }
         default:
             return state;    
     }

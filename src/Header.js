@@ -1,13 +1,22 @@
 import React from 'react';
 import logo from './imgs/logo.png';
 import "./Header.css";
-import {Link} from "react-router-dom"
+import {Link,useNavigate} from "react-router-dom"
+import {auth} from './firebase'
 import SearchIcon from '@mui/icons-material/Search';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
 import { useStateValue } from './StateProvider';
 function Header() {
-  const[{cart}]=useStateValue();
+  const[{cart,user}]=useStateValue();
+  const navigate=useNavigate();
+  const handleAuthentication=()=>{
+    if(user){
+        auth
+            .signOut();
+        navigate('/');
+    }
+  }
   return (
     <nav className='header'>
 
@@ -29,10 +38,10 @@ function Header() {
        
         <div className='header__nav'>
             {/* Signing link */}
-            <Link to="/login" className="header__link">
-              <div className='header__navOption'>
+            <Link to={!user && "/login"} className="header__link">
+              <div  className='header__navOption'>
                   <span className='header__optionLineOne'>Hello,</span>
-                  <span className='header__optionLineTwo'> Sign In</span>
+                  <span onClick={handleAuthentication} className='header__optionLineTwo '>{user?'Sign Out':'Sign In' } </span>
               </div>
             </Link>
             {/* orderes link */}
