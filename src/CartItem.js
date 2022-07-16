@@ -28,7 +28,7 @@ function CartItem(props) {
                     <p>⭐</p>
                 ))}
             </div>
-            <button onClick={removeFromCart}>Remove Item</button>
+            <button className='cartItem__remove' onClick={removeFromCart}><span>Remove Item</span></button>
         </div>
     </div>
   )
