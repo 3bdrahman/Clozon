@@ -28,6 +28,11 @@ const reducer= (state,action)=>{
                 ...state,
                 cart: newCart
             }
+            case 'Empty_Cart':
+                return{
+                    ...state,
+                    cart:[]
+                }
             case 'Set_User':
                 return{
                     ...state,

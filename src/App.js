@@ -10,6 +10,12 @@ import {auth} from './firebase'
 import { useStateValue } from './StateProvider';
 import Footer from './Footer';
 import Payment from './Payment';
+import Orders from './Orders';
+import {loadStripe} from "@stripe/stripe-js"
+import {Elements} from "@stripe/react-stripe-js"
+const pk = loadStripe(
+  "pk_test_51LMN7kIehvswrML9fQUvbCZNYLRYdfaBbSN2fSvzUtQ0pp7c6S0ve6asnjecA9E8hPtPk6Fcsja775XHlTNfZrci00aP0t7tRz"
+)
 function App() {
   const[{},dispatch]=useStateValue();
   useEffect(()=>{
@@ -34,6 +40,12 @@ function App() {
     <Router>
       <div className="App">
         <Routes>
+        <Route path='/orders' element={
+          <>
+            <Header/>
+            <Orders/>
+          </>
+        }></Route>
         {/* checkout */}
           <Route path='/checkout' element={<>
             <Header/>
@@ -46,7 +58,10 @@ function App() {
           {/* Payments root */}
           <Route path='/payment' element={<>
             <Header/>
+            <Elements stripe={pk}>
             <Payment/>
+            </Elements>
+            
           </>}> 
             
           </Route>
