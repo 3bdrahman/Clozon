@@ -20,3 +20,6 @@
 ### Stripe API: 
 #### Used to process payements and confirm transactions. 
 ![](Payment.gif)
+
+
+### Note: The order-history isn't loading and the payement doesn't say processed because Firebase needs me to upgrade my plan to use cloud-functions.
