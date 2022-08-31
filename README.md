@@ -12,4 +12,4 @@
 ![](Authentication.gif)
 
 ### Firestore database: Used for storing account details such as order history and current cart items.
-
+![](Cart.gif)
