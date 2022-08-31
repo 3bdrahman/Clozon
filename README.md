@@ -17,5 +17,6 @@
 #### Used for storing account details such as order history and current cart items.
 ![](Cart.gif)
 
-### Stripe API: used to process payements and confirm transactions. 
+### Stripe API: 
+#### Used to process payements and confirm transactions. 
 ![](Payment.gif)
