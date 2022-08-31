@@ -18,4 +18,4 @@
 ![](Cart.gif)
 
 ### Stripe API: used to process payements and confirm transactions. 
-
+![](payment.gif)
