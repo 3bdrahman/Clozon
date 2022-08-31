@@ -9,7 +9,7 @@
 #Back-End:
 
 ### Firebase Authentication: I was able to let users create user accounts and login / logout. 
-
+![](Authentication.gif)
 
 ### Firestore database: Used for storing account details such as order history and current cart items.
 
