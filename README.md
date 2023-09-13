@@ -5,7 +5,7 @@
 ![](Front-End.gif)
 
 ### Navigation: 
-#### I used react router to handle in-website navigation. The feature of having all components loaded is if it's a one-page website impressive. The website loads different pages at once.
+#### I used react router to handle in-website navigation. The feature of having all components loaded as if it's a one-page website impressive. The website loads different pages at once.
 
 # Back-End:
 
